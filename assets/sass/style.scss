@@ -12,6 +12,18 @@ html {
 
 @font-face {
   font-family: "Archivo";
+  src: url("/assets/fonts/Archivo/Archivo-Black.truetype") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/assets/fonts/Archivo/Archivo-Bold.truetype") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Archivo";
   src: url("assets/fonts/Archivo-Regular.eot");
   src: url("assets/fonts/Archivo-Regular.eot?#iefix")
       format("embedded-opentype"),
@@ -20,9 +32,41 @@ html {
     url("assets/fonts/Archivo-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/assets/fonts/Archivo/Archivo-Medium.truetype") format("truetype");
+  font-weight: 500;
+}
+
+// --------
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto/Roboto-Black.truetype") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto/Roboto-Bold.truetype") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto/Roboto-Regular.truetype") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto/Roboto-Medium.truetype") format("truetype");
+  font-weight: 500;
 }
 
 *,
 body {
-  font-family: "Archivo";
+  font-family: Roboto;
 }
