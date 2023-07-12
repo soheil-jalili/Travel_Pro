@@ -4,10 +4,29 @@
 // Variable
 $border__radius: 2rem;
 $mainColor: orange;
+$navATag: #d2d2d2;
+$beforLine: #e76f51;
+$whiteColor: #ffff;
+$exploreImgTitleColor: #3b3735;
+$backgroundBody: #faf4f2;
+$btnLocationColor: #8d8d8d;
+$locationPrice: #e76f51;
+
+// mixin
 @mixin center-item($justifyContent, $alignItems) {
   display: flex;
   justify-content: $justifyContent;
   align-items: $alignItems;
+}
+
+@mixin borderBtn() {
+  border: 1px solid $whiteColor;
+  padding: 1rem 3rem;
+  border-radius: 2.75rem;
+  -webkit-border-radius: 2.75rem;
+  -moz-border-radius: 2.75rem;
+  -ms-border-radius: 2.75rem;
+  -o-border-radius: 2.75rem;
 }
 
 html {
@@ -24,137 +43,278 @@ body {
   line-height: 1.6;
   font-size: 1.6rem;
   overflow-x: hidden;
+  background-color: $backgroundBody;
 }
 /***** Header *****/
 .header {
   background: linear-gradient(rgba(59, 53, 53, 0.5), rgba(59, 55, 53, 0.5)),
     url("../images/header-bg.jpg");
 
-  height: 100vh;
+  min-height: 95vh;
   background-position: center;
   background-size: cover;
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
-
-  .nav {
-    @include center-item(space-between, center);
-    padding: 1rem 0;
-    a.logo {
-      width: 5.5rem;
-      height: 5.5rem;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .navbar__nav {
-      display: none;
+  border-bottom-left-radius: 20rem;
+  border-bottom-right-radius: 20rem;
+  .nav__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+    .nav {
+      display: flex;
       align-items: center;
-      .navbar__item {
-        position: relative;
-        a {
-          padding: 0 15px;
-        }
-        a.active__link {
-          &:before {
-            content: "";
-            width: 20px;
-            height: 2px;
-            background-color: red;
-            position: absolute;
-            transform: rotate(-30deg);
-            -webkit-transform: rotate(-30deg);
-            -moz-transform: rotate(-30deg);
-            -ms-transform: rotate(-30deg);
-            -o-transform: rotate(-30deg);
+      justify-content: space-between;
+      ul {
+        display: flex;
+        margin: 0 2rem;
+        li {
+          a {
+            padding: 0 1.5rem;
+            color: $navATag;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .active__link {
+            &::before {
+              content: "";
+              position: absolute;
+              width: 4rem;
+              height: 0.25rem;
+              background-color: $beforLine;
+              transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+              -moz-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              -o-transform: rotate(45deg);
+              text-align: center;
+            }
           }
         }
       }
     }
+
     .header__links {
-      display: none;
+      display: flex;
+      align-items: center;
+
+      a {
+        margin: 0 1.5rem;
+        color: $whiteColor;
+      }
+      .header__link--border {
+        @include borderBtn();
+      }
     }
-    .nav__menu--hamber {
-      background-color: #fff;
-      width: 5.5rem;
-      height: 5.5rem;
-      @include center-item(center, center);
-      border-radius: $border__radius;
-      -webkit-border-radius: $border__radius;
-      -moz-border-radius: $border__radius;
-      -ms-border-radius: $border__radius;
-      -o-border-radius: $border__radius;
+  }
+
+  // Content Header
+
+  .content__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7.5rem;
+    & > * {
+      margin-top: 3rem;
+    }
+    h1.content__header-title {
+      font-family: "Archivo-Black";
+      color: $whiteColor;
+      font-size: 5rem;
+      width: 40%;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    p.content__header-description {
+      color: $whiteColor;
+      width: 35%;
+      text-align: center;
+    }
+
+    a.content__header-btn {
+      color: $whiteColor;
+      background-color: $beforLine;
+
+      padding: 1rem 6rem;
+      border-radius: 2rem;
+      -webkit-border-radius: 2rem;
+      -moz-border-radius: 2rem;
+      -ms-border-radius: 2rem;
+      -o-border-radius: 2rem;
       cursor: pointer;
-      span.nav__btn-line {
-        .nav__btn--open {
-          background: transparent;
+    }
+  }
+}
+
+// main
+
+.main {
+  .container {
+    // Facilites
+    section.facilities {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 0 2rem;
+      margin: -4rem 0;
+
+      .facilites__card {
+        background-color: $whiteColor;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+          rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        width: 357px;
+        height: 312px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2.5rem;
+        -webkit-border-radius: 2.5rem;
+        -moz-border-radius: 2.5rem;
+        -ms-border-radius: 2.5rem;
+        -o-border-radius: 2.5rem;
+
+        h5.facilites__card-title {
+          font-family: "Archivo-Black";
         }
 
-        content: "";
-        width: 3rem;
-        height: 0.3rem;
-        background-color: $mainColor;
-        position: relative;
+        & > * {
+          margin: 0.5rem 0;
+        }
+      }
+    }
+
+    // Explore Img
+    .explore__main-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 10rem 0 5rem;
+
+      h2 {
+        font-family: "Archivo-Black";
+        margin-top: 2.5rem;
+        width: 22%;
         text-align: center;
-        border-radius: 5rem;
-        -webkit-border-radius: 5rem;
-        -moz-border-radius: 5rem;
-        -ms-border-radius: 5rem;
-        -o-border-radius: 5rem;
-        transition: all ease 0.3s;
-        -webkit-transition: all ease 0.3s;
-        -moz-transition: all ease 0.3s;
-        -ms-transition: all ease 0.3s;
-        -o-transition: all ease 0.3s;
+        font-size: 2.5rem;
+        color: $exploreImgTitleColor;
+      }
+    }
 
-        &::before,
-        &::after {
-          content: "";
+    // Location Card
+    .location {
+      display: grid;
+      gap: 2.75rem;
+
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      align-items: center;
+      justify-content: center;
+      .location__card {
+        position: relative;
+        border-radius: 2rem;
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius: 2rem;
+        background-color: $whiteColor;
+        padding: 3rem;
+        width: 320px;
+        height: 420px;
+        @include center-item(center, center);
+        flex-direction: column;
+        text-align: center;
+
+        & > * {
+          margin-top: 1rem;
+        }
+        img {
+          object-fit: cover;
+          border-radius: 2rem;
+          -webkit-border-radius: 2rem;
+          -moz-border-radius: 2rem;
+          -ms-border-radius: 2rem;
+          -o-border-radius: 2rem;
+          position: relative;
+        }
+        .location__card-icon {
+          background-color: $whiteColor;
+          border-radius: 1rem;
+          -webkit-border-radius: 1rem;
+          -moz-border-radius: 1rem;
+          -ms-border-radius: 1rem;
+          -o-border-radius: 1rem;
+          padding: 0.5rem 1rem;
           position: absolute;
-          width: 3rem;
-          height: 0.3rem;
-          background-color: $mainColor;
-          border-radius: 5rem;
-          -webkit-border-radius: 5rem;
-          -moz-border-radius: 5rem;
-          -ms-border-radius: 5rem;
-          -o-border-radius: 5rem;
-          transition: all ease 0.3s;
-          -webkit-transition: all ease 0.3s;
-          -moz-transition: all ease 0.3s;
-          -ms-transition: all ease 0.3s;
-          -o-transition: all ease 0.3s;
-          @include center-item(center, center);
+          right: 4rem;
+          top: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
         }
-        &::after {
-          top: -0.8rem;
+
+        .location__card-price {
+          background-color: $whiteColor;
+          text-align: center;
+          padding: 1rem 3rem;
+          margin-top: -2rem;
+          z-index: 9999;
+          border-radius: 2rem;
+          -webkit-border-radius: 2rem;
+          -moz-border-radius: 2rem;
+          -ms-border-radius: 2rem;
+          -o-border-radius: 2rem;
+          color: $locationPrice;
+          font-family: "Roboto-Medium";
         }
-        &::before {
-          top: 0.8rem;
+        .location__card-title {
+          font-family: "Archivo-Black";
+          color: $exploreImgTitleColor;
+        }
+        .location__card-btn {
+          background-color: rgba(141, 141, 141, 0.2);
+          color: $btnLocationColor;
+          font-weight: bold;
+          border-radius: 2rem;
+          -webkit-border-radius: 2rem;
+          -moz-border-radius: 2rem;
+          -ms-border-radius: 2rem;
+          -o-border-radius: 2rem;
+          padding: 1rem 4rem;
         }
       }
     }
-    .nav__btn--open span.nav__btn-line {
-      background-color: transparent;
-    }
-    .nav__btn--open span.nav__btn-line {
-      &::before {
-        transform: translateY(-9px) rotate(45deg);
-        -webkit-transform: translateY(-9px) rotate(45deg);
-        -moz-transform: translateY(-9px) rotate(45deg);
-        -ms-transform: translateY(-9px) rotate(45deg);
-        -o-transform: translateY(-9px) rotate(45deg);
-      }
-    }
-    .nav__btn--open span.nav__btn-line {
-      &::after {
-        transform: translateY(7px) rotate(-45deg);
-        -webkit-transform: translateY(7px) rotate(-45deg);
-        -moz-transform: translateY(7px) rotate(-45deg);
-        -ms-transform: translateY(7px) rotate(-45deg);
-        -o-transform: translateY(7px) rotate(-45deg);
+
+    // Btn View
+    .btn__view {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .btn__view-main {
+        background-color: transparent;
+        color: $locationPrice;
+        border: 1px solid $locationPrice;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5rem 0;
+        flex-direction: column;
+        width: 200px;
+        height: 50px;
+        border-radius: 3rem;
+        -webkit-border-radius: 3rem;
+        -moz-border-radius: 3rem;
+        -ms-border-radius: 3rem;
+        -o-border-radius: 3rem;
+        font-family: "Roboto-Medium";
       }
     }
   }
 }
-/***** End Header *****/

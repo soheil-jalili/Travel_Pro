@@ -10,35 +10,265 @@
   <body>
     <header class="header" id="header">
       <div class="container">
-        <nav class="nav">
-          <a href="#" class="logo">
-            <img src="./assets/svgs/logo.svg" alt="Logo" />
-          </a>
-          <ul class="navbar__nav">
-            <li class="navbar__item">
-              <a href="#" class="active__link">Home</a>
-            </li>
-            <li class="navbar__item"><a href="#">Destination</a></li>
-            <li class="navbar__item"></li>
-            <li class="navbar__item"><a href="#">Near me</a></li>
-            <li class="navbar__item"><a href="#">Events</a></li>
-            <li class="navbar__item"><a href="#">Blog</a></li>
-            <li class="navbar__item"><a href="#">Gallery</a></li>
-            <li class="navbar__item"><a href="#">About</a></li>
-            <li class="navbar__item"><a href="#">Contact us</a></li>
-          </ul>
+        <nav class="nav__main">
+          <div class="nav">
+            <a href="#" class="logo">
+              <img src="./assets/svgs/logo.svg" alt="Logo" />
+            </a>
+            <ul class="navbar__nav">
+              <li class="navbar__item">
+                <a href="#" class="active__link">Home</a>
+              </li>
+              <li class="navbar__item"><a href="#">Destination</a></li>
+              <li class="navbar__item"></li>
+              <li class="navbar__item">
+                <a href="#">Near me</a>
+              </li>
+              <li class="navbar__item"><a href="#">Events</a></li>
+              <li class="navbar__item"><a href="#">Blog</a></li>
+              <li class="navbar__item"><a href="#">Gallery</a></li>
+              <li class="navbar__item"><a href="#">About</a></li>
+              <li class="navbar__item"><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
           <div class="header__links">
             <a href="#" type="submit">Sign up</a>
             <a href="#" type="submit" class="header__link--border">Sign in</a>
           </div>
 
-          <div class="nav__menu--hamber nav__btn--open">
+          <!-- <div class="nav__menu--hamber">
             <span class="nav__btn-line"></span>
-          </div>
+          </div> -->
         </nav>
+        <section class="content__header">
+          <h1 class="content__header-title">Find Yourself Outside.</h1>
+          <p class="content__header-description">
+            Book unique camping experiences on over 300,000 campsites, cabins,
+            RV parks, public parks and more.
+          </p>
+          <a href="#" class="content__header-btn">Discover</a>
+        </section>
       </div>
     </header>
-    <main></main>
+    <main class="main" id="main">
+      <div class="container">
+        <!-- ========== Start Facilities ========== -->
+        <section class="facilities">
+          <div class="facilites__card">
+            <img
+              src="assets/svg-icons/fire.svg"
+              alt="Camping & Day Use"
+              class="facilites__card-img"
+            />
+            <h5 class="facilites__card-title">Camping & Day Use</h5>
+            <p class="facilites__card-description">
+              Return to your favorite spot or discover a new one that’s right
+              for you.
+            </p>
+          </div>
+          <div class="facilites__card">
+            <img
+              src="assets/svg-icons/ticket.svg"
+              alt="Camping & Day Use"
+              class="facilites__card-img"
+            />
+            <h5 class="facilites__card-title">Tours & Tickets</h5>
+            <p class="facilites__card-description">
+              Reserve tours and tickets to participate in events.
+            </p>
+          </div>
+          <div class="facilites__card">
+            <img
+              src="assets/svg-icons/permits.svg"
+              alt="Camping & Day Use"
+              class="facilites__card-img"
+            />
+            <h5 class="facilites__card-title">Permits</h5>
+            <p class="facilites__card-description">
+              Obtain permits for access to high-demand locations.
+            </p>
+          </div>
+          <div class="facilites__card">
+            <img
+              src="assets/svg-icons/recreation .svg"
+              alt="Camping & Day Use"
+              class="facilites__card-img"
+            />
+            <h5 class="facilites__card-title">Recreation Activities</h5>
+            <p class="facilites__card-description">
+              Find the best spots for hunting, fishing & recreational shooting.
+            </p>
+          </div>
+        </section>
+        <!-- ========== End Facilities ========== -->
+
+        <!-- ========== Start Explore Destinations ========== -->
+
+        <section class="explore__main-img">
+          <img src="assets/svg-icons/explore.svg" alt="Explore" />
+
+          <h2>Explore Destinations & Activities</h2>
+        </section>
+        <section class="explore__main"></section>
+        <!-- ========== End & Activities ========== -->
+
+        <!-- ========== Start Location ========== -->
+        <section class="location" id="location">
+          <div class="location__card">
+            <img src="assets/images/image1.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image2.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image3.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image4.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image5.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image6.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image7.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image8.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image9.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image10.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image11.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+          <div class="location__card">
+            <img src="assets/images/image12.jpg" alt="location 1" />
+            <div class="location__card-icon">
+              <img src="assets/svg-icons/heart.svg" alt="Heart Icon" />
+            </div>
+            <div class="location__card-price">$36/night</div>
+            <h3 class="location__card-title">Trickle Creek Ranch</h3>
+            <p class="location__card-description">
+              Book unique camping experiences on over 300,000 campsites.
+            </p>
+            <a href="#" class="location__card-btn">Read More</a>
+          </div>
+        </section>
+        <!-- ========== End Location ========== -->
+
+        <!-- ========== Start ViewBtn ========== -->
+        <section class="btn__view">
+          <a href="#" class="btn__view-main"> View all </a>
+        </section>
+        <!-- ========== End ViewBtn ========== -->
+      </div>
+    </main>
     <footer></footer>
     <script src="./assets/js/main.js"></script>
   </body>
