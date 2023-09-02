@@ -1,16 +1,6 @@
-const hamberMenu = document.querySelector(".nav__menu--hamber"),
-  navBarNav = document.querySelector(".navbar__nav");
+const hamburgerBtn = document.querySelector(".nav__btn"),
+  navMenu = document.querySelector(".nav-menu");
 
-let isActive = false;
-
-hamberMenu.addEventListener("click", () => {
-  if (isActive) {
-    hamberMenu.classList.remove("nav__btn--open");
-    navBarNav.classList.remove("nav__open");
-    isActive = false;
-  } else {
-    hamberMenu.classList.add("nav__btn--open");
-    navBarNav.classList.add("nav__open");
-    isActive = true;
-  }
+hamburgerBtn.addEventListener("click", () => {
+  navMenu.classList.add("nav-menu--active");
 });
