@@ -137,6 +137,11 @@ li {
   list-style-type: none;
 }
 
+button {
+  outline: none;
+  border: none !important;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
