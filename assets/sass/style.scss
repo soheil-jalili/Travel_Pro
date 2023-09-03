@@ -52,54 +52,77 @@ body {
     url("../images/header-bg.jpg");
   background-position: center;
   background-size: cover;
+  min-height: 58rem;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 10rem;
   .nav {
     @include center-item(space-between, center);
     padding: 1rem 0;
     .nav__logo {
+      width: 5.5rem;
+      height: 5.5rem;
+      display: block;
       .nav__logo--img {
-        width: 5rem;
-        height: 5rem;
+        width: 100%;
+        height: 100%;
       }
     }
     .nav-menu {
       @include center-item(center, center);
-      position: fixed;
-      height: 100vh;
+      width: 25rem;
       background-color: $beforeLine;
-      z-index: 1;
+      position: fixed;
+      z-index: 999;
       top: 0;
-      left: 50rem;
-      right: 0;
+      left: -25rem;
+      bottom: 0;
       flex-direction: column;
       transition: all 0.5s;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
       -ms-transition: all 0.5s;
       -o-transition: all 0.5s;
+      right: 1rem;
       .mobile-menu {
+        margin-bottom: 3rem;
         .mobile-menu__item {
           .mobile-menu__link {
             padding: 1rem 0;
             display: block;
-            font-size: 3rem;
+            font-size: 2.5rem;
             text-align: center;
-            color: $navATag;
+            color: $whiteColor;
           }
         }
       }
-      .close {
-        position: absolute;
-        top: 1rem;
-        right: 2rem;
-        cursor: pointer;
-        .close__btn {
-          font-size: 5rem;
-          color: $navATag;
+      .nav-menu__links {
+        display: flex;
+        justify-content: space-around;
+        .nav-menu__link {
+          color: $whiteColor;
+          border: 1px solid $whiteColor;
+          padding: 1rem;
+          flex-grow: 1;
+          margin: 0 0.4rem;
         }
       }
     }
-    .nav-menu.nav-menu--active {
-      left: 0;
+    .nav-menu--active .nav__btn-line {
+      background-color: transparent !important;
+      &::before {
+        transform: translateY(1rem) rotate(45deg);
+        -webkit-transform: translateY(1rem) rotate(45deg);
+        -moz-transform: translateY(1rem) rotate(45deg);
+        -ms-transform: translateY(1rem) rotate(45deg);
+        -o-transform: translateY(1rem) rotate(45deg);
+      }
+      &::after {
+        transform: translateY(-1rem) rotate(-45deg);
+        -webkit-transform: translateY(-1rem) rotate(-45deg);
+        -moz-transform: translateY(-1rem) rotate(-45deg);
+        -ms-transform: translateY(-1rem) rotate(-45deg);
+        -o-transform: translateY(-1rem) rotate(-45deg);
+      }
     }
     .menu {
       display: none;
@@ -110,51 +133,164 @@ body {
     .nav__btn {
       @include center-item(center, center);
       background-color: $whiteColor;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 1.4rem;
-      -webkit-border-radius: 1.4rem;
-      -moz-border-radius: 1.4rem;
-      -ms-border-radius: 1.4rem;
-      -o-border-radius: 1.4rem;
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 2rem;
+      -webkit-border-radius: 2rem;
+      -moz-border-radius: 2rem;
+      -ms-border-radius: 2rem;
+      -o-border-radius: 2rem;
       cursor: pointer;
       .nav__btn-line {
         position: relative;
-        width: 2.7rem;
-        height: 0.4rem;
+        width: 3rem;
+        height: 0.3rem;
         background-color: $beforeLine;
-        border-radius: 10rem;
-        -webkit-border-radius: 10rem;
-        -moz-border-radius: 10rem;
-        -ms-border-radius: 10rem;
-        -o-border-radius: 10rem;
+        border-radius: 5rem;
+        -webkit-border-radius: 5rem;
+        -moz-border-radius: 5rem;
+        -ms-border-radius: 5rem;
+        -o-border-radius: 5rem;
+        transition: all ease-in-out 150ms;
+        -webkit-transition: all ease-in-out 150ms;
+        -moz-transition: all ease-in-out 150ms;
+        -ms-transition: all ease-in-out 150ms;
+        -o-transition: all ease-in-out 150ms;
         &::before {
           content: "";
           position: absolute;
-          width: 2.7rem;
-          height: 0.4rem;
+          width: 3rem;
+          height: 0.3rem;
           background-color: $beforeLine;
-          border-radius: 10rem;
-          -webkit-border-radius: 10rem;
-          -moz-border-radius: 10rem;
-          -ms-border-radius: 10rem;
-          -o-border-radius: 10rem;
-          top: 1rem;
+          border-radius: 5rem;
+          -webkit-border-radius: 5rem;
+          -moz-border-radius: 5rem;
+          -ms-border-radius: 5rem;
+          -o-border-radius: 5rem;
+          top: -1rem;
+          transition: all ease-in-out 200ms;
+          -webkit-transition: all ease-in-out 200ms;
+          -moz-transition: all ease-in-out 200ms;
+          -ms-transition: all ease-in-out 200ms;
+          -o-transition: all ease-in-out 200ms;
         }
         &::after {
           content: "";
           position: absolute;
-          width: 2.7rem;
-          height: 0.4rem;
+          width: 3rem;
+          height: 0.3rem;
           background-color: $beforeLine;
-          border-radius: 10rem;
-          -webkit-border-radius: 10rem;
-          -moz-border-radius: 10rem;
-          -ms-border-radius: 10rem;
-          -o-border-radius: 10rem;
-          bottom: 1rem;
+          border-radius: 5rem;
+          -webkit-border-radius: 5rem;
+          -moz-border-radius: 5rem;
+          -ms-border-radius: 5rem;
+          -o-border-radius: 5rem;
+          top: 1rem;
+          transition: all ease-in-out 200ms;
+          -webkit-transition: all ease-in-out 200ms;
+          -moz-transition: all ease-in-out 200ms;
+          -ms-transition: all ease-in-out 200ms;
+          -o-transition: all ease-in-out 200ms;
         }
       }
     }
   }
+}
+
+.main {
+  .contact {
+    background-color: $backgroundColorContactUs;
+    @include center-item(center, center);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    margin: 3rem 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 0 10rem;
+    .contact__left-side {
+      z-index: 1;
+      &::before {
+        content: "";
+        background-image: url("../svg-icons/contactWave.svg");
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: 2rem;
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius: 2rem;
+      }
+      .contact__left-side--input-main {
+        display: flex;
+        position: relative;
+        width: 100%;
+        align-items: center;
+        .contact__left-side--input-icon {
+          position: absolute;
+          height: 100%;
+          top: 1.5rem;
+          left: 1.6rem;
+        }
+        .contact__left-side--input {
+          border: none;
+          outline: none;
+          width: 95%;
+          padding: 2rem 5rem;
+          border-radius: 1rem;
+          margin-top: 3rem;
+          font-size: 1.6rem;
+        }
+        .contact__left-side--input-send-icon {
+          background-color: $beforeLine;
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          filter: drop-shadow(2px 13px 15px #e76f51);
+          -webkit-filter: drop-shadow(2px 13px 15px #e76f51);
+          border-radius: 1rem;
+          -webkit-border-radius: 1rem;
+          -moz-border-radius: 1rem;
+          -ms-border-radius: 1rem;
+          -o-border-radius: 1rem;
+          cursor: pointer;
+          top: 3.8rem;
+          right: 5.6rem;
+          position: absolute;
+          outline: none;
+          border: none;
+        }
+      }
+    }
+    .contact__right-side {
+      z-index: 1;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav {
+    .menu {
+      @include center-item(center, center);
+    }
+    .nav-menu {
+      display: none !important;
+    }
+    .nav__btn {
+      display: none !important;
+    }
+  }
+}
+
+body {
 }
