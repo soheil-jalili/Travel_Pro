@@ -1,0 +1,24 @@
+@import "./variables";
+// mixin
+@mixin center-item($justifyContent, $alignItems) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin btn( $backGroundColor: false, $border: false, $color: $whiteColor, $borderRadius: 2rem, $paddingY, $paddingX) {
+    font-family: "Roboto-Medium";
+    padding: $paddingY $paddingX;
+    border-radius: $borderRadius;
+    -webkit-border-radius: $borderRadius;
+    -moz-border-radius: $borderRadius;
+    -ms-border-radius: $borderRadius;
+    -o-border-radius: $borderRadius;
+    color: $color;
+    @if $border {
+        border: 1px solid $whiteColor;
+    }
+    @if $backGroundColor {
+        background-color: $backGroundColor;
+    }
+}

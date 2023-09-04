@@ -1,0 +1,87 @@
+@import "./mixins";
+@media only screen and (min-height: 1024px) and (max-height: 1112px) {
+    .header {
+        min-height: 70vh !important;
+    }
+}
+
+// Max Width
+@media only screen and (max-width: 576px) {
+    .contact {
+        flex-direction: column-reverse;
+    }
+    .facilities {
+        margin-top: -16.5rem !important;
+    }
+}
+
+@media only screen and (max-width: 392px) {
+    .content__header {
+        margin-top: 3.5rem !important;
+        .content__header-title {
+            font-size: 4rem !important;
+        }
+    }
+    .facilities {
+        margin-top: -15rem !important;
+    }
+}
+
+@media only screen and (max-width: 324px) {
+    .content__header {
+        margin-top: 2.5rem !important;
+        .content__header-title {
+            font-size: 3.5rem !important;
+        }
+    }
+    .facilities {
+        margin-top: -10.5rem !important;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .facilities {
+        margin-top: -15.5rem !important;
+    }
+}
+
+// Min Width
+@media only screen and (min-width: 576px) {}
+
+@media only screen and (min-width: 768px) {
+    .content__header {
+        .content__header-description {
+            max-width: 50rem !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header {
+        .nav {
+            .menu {
+                @include center-item(center, center);
+            }
+            .nav-menu {
+                display: none !important;
+            }
+            .nav__btn {
+                display: none !important;
+            }
+            .header__links {
+                display: block;
+            }
+        }
+    }
+    .facilities {
+        margin-top: -14rem !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (min-width: 1400px) {
+    .facilities {
+        margin-top: -14rem !important;
+    }
+}
