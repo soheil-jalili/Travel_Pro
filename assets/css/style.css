@@ -222,7 +222,7 @@ body {
   background: linear-gradient(rgba(59, 53, 53, 0.5), rgba(59, 55, 53, 0.5)), url("../images/header-bg.jpg");
   background-position: center;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 85vh;
   border-bottom-left-radius: 10rem;
   border-bottom-right-radius: 10rem;
   /***** Nav *****/
@@ -292,17 +292,14 @@ body {
   height: 100%;
 }
 .header .nav .nav-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 25rem;
-  background-color: #e76f51;
+  background-color: #3b3735;
   position: fixed;
   z-index: 999;
   top: 0;
   left: -25rem;
   bottom: 0;
-  flex-direction: column;
+  padding: 2.5rem;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -312,24 +309,86 @@ body {
 }
 .header .nav .nav-menu .mobile-menu {
   margin-bottom: 3rem;
+  position: relative;
 }
 .header .nav .nav-menu .mobile-menu .mobile-menu__item .mobile-menu__link {
-  padding: 1rem 0;
-  display: block;
-  font-size: 2.5rem;
-  text-align: center;
+  position: relative;
   color: white;
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  transition: all ease-in-out 250ms;
+  -webkit-transition: all ease-in-out 250ms;
+  -moz-transition: all ease-in-out 250ms;
+  -ms-transition: all ease-in-out 250ms;
+  -o-transition: all ease-in-out 250ms;
 }
-.header .nav .nav-menu .nav-menu__links {
-  display: flex;
-  justify-content: space-around;
+.header .nav .nav-menu .mobile-menu .mobile-menu__item .mobile-menu__link--active {
+  padding-left: 2.2rem;
+}
+.header .nav .nav-menu .mobile-menu .mobile-menu__item .mobile-menu__link--active::before {
+  transition: all ease-in-out 250ms;
+  -webkit-transition: all ease-in-out 250ms;
+  -moz-transition: all ease-in-out 250ms;
+  -ms-transition: all ease-in-out 250ms;
+  -o-transition: all ease-in-out 250ms;
+  content: "";
+  position: absolute;
+  width: 1.8rem !important;
+  height: 0.3rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e76f51;
+  margin: auto;
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+}
+.header .nav .nav-menu .mobile-menu .mobile-menu__item .mobile-menu__link::before {
+  transition: all ease-in-out 250ms;
+  -webkit-transition: all ease-in-out 250ms;
+  -moz-transition: all ease-in-out 250ms;
+  -ms-transition: all ease-in-out 250ms;
+  -o-transition: all ease-in-out 250ms;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.3rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e76f51;
+  margin: auto;
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+}
+.header .nav .nav-menu .mobile-menu .mobile-menu__item .mobile-menu__link:hover {
+  padding-left: 2.2rem;
+}
+.header .nav .nav-menu .mobile-menu .mobile-menu__item .mobile-menu__link:hover::before {
+  width: 1.8rem;
 }
 .header .nav .nav-menu .nav-menu__links .nav-menu__link {
   color: white;
   border: 1px solid white;
   padding: 1rem;
   flex-grow: 1;
-  margin: 0 0.4rem;
+  margin: 0 0.2rem;
+  text-align: center;
+  transition: all ease-in 100ms;
+  -webkit-transition: all ease-in 100ms;
+  -moz-transition: all ease-in 100ms;
+  -ms-transition: all ease-in 100ms;
+  -o-transition: all ease-in 100ms;
+}
+.header .nav .nav-menu .nav-menu__links .nav-menu__link:hover {
+  background-color: white;
+  color: #3b3735;
 }
 .header .nav .nav-menu--active .nav__btn-line {
   background-color: transparent !important;
@@ -478,6 +537,44 @@ body {
   background-color: #e76f51;
 }
 
+/***** Main *****/
+.main {
+  /***** Facilities *****/
+  /***** End Facilities *****/
+  /***** Contact *****/
+  /***** End Contact *****/
+}
+.main .facilities {
+  margin-top: -14.5rem;
+}
+.main .facilities__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1.75rem;
+  -webkit-border-radius: 1.75rem;
+  -moz-border-radius: 1.75rem;
+  -ms-border-radius: 1.75rem;
+  -o-border-radius: 1.75rem;
+  margin: 2rem 0;
+}
+.main .facilities__card-img {
+  width: 100;
+  margin-bottom: 1rem;
+}
+.main .facilities__card-description {
+  text-align: center;
+}
+.main .facilities__card-title {
+  font-family: "Archivo-Black";
+  color: #3b3735;
+  margin-bottom: 0.5rem;
+}
+.main .facilities__card-description {
+  color: #3b3735;
+}
 .main .contact {
   background-color: #f8e1db;
   display: flex;
@@ -554,4 +651,6 @@ body {
   position: absolute;
   outline: none;
   border: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/***** End Main *****/ /***** End Main *****//*# sourceMappingURL=style.css.map */
