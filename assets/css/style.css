@@ -164,7 +164,7 @@ button {
 }
 *,
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif, Helvetica;
 }
 
 .container {
@@ -307,6 +307,15 @@ body {
   -o-transition: all 0.5s;
   right: 1rem;
 }
+.header .nav .nav-menu .nav-menu__title {
+  font-family: "Archivo-Black", sans-serif, Helvetica;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+  border-bottom: 5px solid #e76f51;
+  padding-bottom: 1rem;
+}
 .header .nav .nav-menu .mobile-menu {
   margin-bottom: 3rem;
   position: relative;
@@ -411,7 +420,7 @@ body {
   display: none;
 }
 .header .nav .header__links {
-  font-family: "Roboto-Medium";
+  font-family: "Roboto-Medium", sans-serif, Helvetica;
   display: none;
 }
 .header .nav .header__links .header__link {
@@ -514,7 +523,7 @@ body {
   text-align: center;
 }
 .header .content__header .content__header-title {
-  font-family: "Archivo-Black";
+  font-family: "Archivo-Black", sans-serif, Helvetica;
   font-size: 5rem;
   line-height: 1.2;
   margin-bottom: 3rem;
@@ -539,13 +548,21 @@ body {
 
 /***** Main *****/
 .main {
+  padding: 4rem 0;
   /***** Facilities *****/
   /***** End Facilities *****/
+  /***** Destinations *****/
+  /***** End Destinations *****/
   /***** Contact *****/
   /***** End Contact *****/
 }
 .main .facilities {
-  margin-top: -14.5rem;
+  margin-top: -19rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  justify-content: center;
 }
 .main .facilities__card {
   display: flex;
@@ -558,22 +575,46 @@ body {
   -moz-border-radius: 1.75rem;
   -ms-border-radius: 1.75rem;
   -o-border-radius: 1.75rem;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
+  width: 32rem;
+  height: 26rem;
+  padding: 0 4rem;
+  text-align: center;
+  flex-grow: 1;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
-.main .facilities__card-img {
+.main .facilities__card--img {
+  display: block;
   width: 100;
-  margin-bottom: 1rem;
 }
-.main .facilities__card-description {
+.main .facilities__card--description {
   text-align: center;
 }
-.main .facilities__card-title {
-  font-family: "Archivo-Black";
+.main .facilities__card--title {
+  font-family: "Archivo-Black", sans-serif, Helvetica;
   color: #3b3735;
-  margin-bottom: 0.5rem;
+  margin: 1.5rem 0 0.6rem 0;
+  font-size: 1.8rem;
 }
-.main .facilities__card-description {
+.main .facilities__card--description {
   color: #3b3735;
+}
+.main .destinations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+.main .destinations__img {
+  margin-bottom: 2rem;
+}
+.main .destinations__title {
+  color: #3b3735;
+  font-family: "Archivo-Black", sans-serif, Helvetica;
+  text-align: center;
+  font-size: 3rem;
 }
 .main .contact {
   background-color: #f8e1db;
@@ -652,5 +693,9 @@ body {
   outline: none;
   border: none;
 }
+.main .contact .contact__right-side {
+  z-index: 1;
+}
 
-/***** End Main *****/ /***** End Main *****//*# sourceMappingURL=style.css.map */
+/***** End Main *****/
+/***** End Main *****//*# sourceMappingURL=style.css.map */
