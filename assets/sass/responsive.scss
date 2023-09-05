@@ -25,6 +25,18 @@
   .facilities {
     margin-top: -15rem !important;
   }
+  .main {
+    .destinations {
+      &__title {
+        font-size: 2.5rem;
+      }
+
+      &__img {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 324px) {
@@ -42,6 +54,12 @@
 @media only screen and (max-width: 300px) {
   .facilities {
     margin-top: -15.5rem !important;
+  }
+  .place {
+    width: 26rem !important;
+  }
+  .destinations__img {
+    margin-bottom: 0 !important;
   }
 }
 
