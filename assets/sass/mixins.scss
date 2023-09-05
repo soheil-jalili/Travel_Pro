@@ -6,7 +6,7 @@
     align-items: $alignItems;
 }
 
-@mixin btn( $backGroundColor: false, $border: false, $color: $whiteColor, $borderRadius: 2rem, $paddingY, $paddingX) {
+@mixin btn( $backGroundColor: false, $border: false, $color: $whiteColor, $borderRadius: 2rem, $paddingY, $paddingX, $border-color) {
     font-family: "Roboto-Medium";
     padding: $paddingY $paddingX;
     border-radius: $borderRadius;
@@ -16,7 +16,7 @@
     -o-border-radius: $borderRadius;
     color: $color;
     @if $border {
-        border: 1px solid $whiteColor;
+        border: 1px solid $border-color;
     }
     @if $backGroundColor {
         background-color: $backGroundColor;
