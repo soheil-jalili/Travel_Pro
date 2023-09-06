@@ -529,7 +529,7 @@ body {
   /***** End Destinations *****/
   /***** Contact *****/
   .contact {
-    @include center-item(center, center);
+    @include center-item(space-between, center);
     flex-direction: column-reverse;
     background-color: $backgroundColorContactUs;
     border-radius: 2rem;
@@ -537,7 +537,7 @@ body {
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
-    margin: 3rem 0;
+    margin: 6rem 0;
     position: relative;
     background-repeat: no-repeat;
     background-position: center;
@@ -564,11 +564,10 @@ body {
         -o-border-radius: 2rem;
         background-repeat: no-repeat;
       }
-      h2 {
+      .contact__left-side__title {
         font-family: $secondary-font;
         color: $exploreImgTitleColor;
         font-size: 3rem;
-        max-width: 16rem;
         margin: 1.5rem auto;
       }
       p {
@@ -580,43 +579,44 @@ body {
         position: relative;
         width: 100%;
         align-items: center;
-
+        background-color: $whiteColor;
+        height: 6rem;
+        margin-top: 2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        padding: 0 1.5rem;
         .content__left-side--form {
-          flex-grow: 1;
+          height: 100%;
+          width: 100%;
+          @include center-item(center, center);
           .contact__left-side--input-icon {
-            position: absolute;
-
-            top: 5rem;
-            left: 1.6rem;
+            flex-shrink: 0;
           }
           .contact__left-side--input {
-            border: none;
             outline: none;
-            width: 95%;
-            padding: 2rem 5rem;
-            border-radius: 1rem;
-            margin-top: 3rem;
+            border: none;
+            width: 100%;
+            height: 100%;
+            color: $btnLocationColor;
+            padding: 0 1rem;
             font-size: 1.6rem;
           }
           .contact__left-side--input-send-icon {
             background-color: $beforeLine;
-            padding: 1rem;
+            width: 5rem;
+            height: 5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            filter: drop-shadow(2px 13px 15px $beforeLine);
-            -webkit-filter: drop-shadow(2px 13px 15px $beforeLine);
-            border-radius: 1rem;
-            -webkit-border-radius: 1rem;
-            -moz-border-radius: 1rem;
-            -ms-border-radius: 1rem;
-            -o-border-radius: 1rem;
+            border-radius: 2rem;
+            -webkit-border-radius: 2rem;
+            -moz-border-radius: 2rem;
+            -ms-border-radius: 2rem;
+            -o-border-radius: 2rem;
             cursor: pointer;
-            top: 3.8rem;
-            right: 2rem;
-            position: absolute;
             outline: none;
             border: none;
+            flex-shrink: 0;
           }
         }
       }

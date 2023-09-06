@@ -34,6 +34,9 @@
       }
     }
   }
+  .contact__left-side__title {
+    max-width: 16rem;
+  }
 }
 
 @media only screen and (max-width: 324px) {
@@ -78,6 +81,15 @@
   }
   .contact {
     flex-direction: row !important;
+    text-align: left !important;
+  }
+
+  .contact__left-side {
+    flex-basis: 60% !important;
+    padding-right: 2rem;
+  }
+  .contact__right-side {
+    flex-basis: 40% !important;
   }
 }
 
@@ -101,13 +113,30 @@
   .facilities {
     margin-top: -14rem !important;
   }
+  .contact__left-side {
+    padding-right: 4rem;
+  }
+  .contact__left-side__title {
+    margin-bottom: 0 !important;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
+  .contact__left-side {
+    flex-basis: auto !important;
+    width: 60rem;
+  }
+  .contact__right-side {
+    width: 42rem;
+    flex-basis: auto !important;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
   .facilities {
     margin-top: -14rem !important;
+  }
+  .contact {
+    padding: 3rem 6rem;
   }
 }
