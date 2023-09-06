@@ -7,9 +7,6 @@
 
 // Max Width
 @media only screen and (max-width: 576px) {
-  .contact {
-    flex-direction: column-reverse;
-  }
   .facilities {
     margin-top: -16.5rem !important;
   }
@@ -78,6 +75,9 @@
   }
   .facilities {
     margin-top: -14rem !important;
+  }
+  .contact {
+    flex-direction: row !important;
   }
 }
 
