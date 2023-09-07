@@ -19,7 +19,7 @@
     margin-top: -15rem !important;
   }
   .main .destinations__title {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
   .main .destinations__img {
     width: 8rem;
@@ -27,6 +27,18 @@
   }
   .contact__left-side__title {
     max-width: 16rem;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer .rightSide__footer-aboutUs {
+    margin-left: 0 !important;
+  }
+  .footer .footer__right {
+    justify-content: center !important;
+  }
+  .footer .rightSide__footer-aboutUs {
+    width: 100% !important;
   }
 }
 @media only screen and (max-width: 324px) {
@@ -40,15 +52,25 @@
     margin-top: -10.5rem !important;
   }
 }
+@media only screen and (max-width: 336px) {
+  .place {
+    width: 24rem !important;
+  }
+}
 @media only screen and (max-width: 300px) {
   .facilities {
     margin-top: -15.5rem !important;
   }
-  .place {
-    width: 26rem !important;
-  }
   .destinations__img {
     margin-bottom: 0 !important;
+  }
+  .place {
+    width: 20rem !important;
+  }
+}
+@media only screen and (max-width: 236px) {
+  .place {
+    width: 19rem !important;
   }
 }
 @media only screen and (min-width: 576px) {
@@ -99,6 +121,21 @@
   .contact__left-side__title {
     margin-bottom: 0 !important;
   }
+  .leftSide__app--img {
+    display: block !important;
+  }
+  .leftSide__app--mobile {
+    display: none !important;
+  }
+  .footer__wrapper {
+    display: flex;
+  }
+  .footer__left {
+    max-width: 50rem !important;
+  }
+  .footer__scroll {
+    left: auto !important;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .contact__left-side {
@@ -108,6 +145,13 @@
   .contact__right-side {
     width: 42rem;
     flex-basis: auto !important;
+  }
+  .footer__wrapper {
+    justify-content: space-between;
+  }
+  .rightSide__footer-aboutUs {
+    margin-bottom: 0 !important;
+    margin-left: 2rem !important;
   }
 }
 @media only screen and (min-width: 1400px) {

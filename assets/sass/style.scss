@@ -653,7 +653,7 @@ body {
   .footer__scroll {
     @include center-item(center, center);
     position: absolute;
-    right: 9rem;
+    right: 0;
     top: -2.5rem;
     background-color: $whiteColor;
     width: 5rem;
@@ -663,10 +663,10 @@ body {
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
+    margin: 0 auto;
+    left: 0;
   }
   .footer__wrapper {
-    display: flex;
-    justify-content: space-between;
     .footer__left {
       max-width: 60rem;
       .leftSide__footer {
@@ -676,17 +676,17 @@ body {
           margin-bottom: 3rem;
         }
       }
-      .leftSide__app__title {
-        color: $exploreImgTitleColor;
-        font-family: $secondary-font;
-        margin-bottom: 1rem;
+      .leftSide__app--img {
+        display: none;
+        .leftSide__app__title {
+          color: $exploreImgTitleColor;
+          font-family: $secondary-font;
+          margin-bottom: 1rem;
+        }
 
         &--img {
           img {
             object-fit: cover;
-            &:nth-child(1) {
-              margin-right: 0.5rem;
-            }
           }
         }
       }
@@ -695,9 +695,13 @@ body {
       .rightSide__footer {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
         .rightSide__footer-aboutUs {
-          width: 18rem;
+          width: 16rem;
           margin-left: 1rem;
+          margin-bottom: 1rem;
+
           h2 {
             color: $exploreImgTitleColor;
             font-family: $secondary-font;
@@ -707,12 +711,25 @@ body {
           ul {
             li {
               a {
+                -webkit-transition: 0.3s;
+                -moz-transition: 0.3s;
+                -o-transition: 0.3s;
+                transition: 0.3s;
                 color: $exploreImgTitleColor;
                 &:hover {
                   text-decoration: underline;
                 }
               }
             }
+          }
+        }
+        .leftSide__app--mobile {
+          display: block;
+
+          .leftSide__app__title {
+            color: $exploreImgTitleColor;
+            font-family: $secondary-font;
+            margin-bottom: 1rem;
           }
         }
       }

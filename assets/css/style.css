@@ -874,7 +874,7 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 9rem;
+  right: 0;
   top: -2.5rem;
   background-color: white;
   width: 5rem;
@@ -884,10 +884,8 @@ body {
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
-}
-.footer .footer__wrapper {
-  display: flex;
-  justify-content: space-between;
+  margin: 0 auto;
+  left: 0;
 }
 .footer .footer__wrapper .footer__left {
   max-width: 60rem;
@@ -899,25 +897,28 @@ body {
   color: #3b3735;
   margin-bottom: 3rem;
 }
-.footer .footer__wrapper .footer__left .leftSide__app__title {
+.footer .footer__wrapper .footer__left .leftSide__app--img {
+  display: none;
+}
+.footer .footer__wrapper .footer__left .leftSide__app--img .leftSide__app__title {
   color: #3b3735;
   font-family: "Archivo-Black", sans-serif, Helvetica;
   margin-bottom: 1rem;
 }
-.footer .footer__wrapper .footer__left .leftSide__app__title--img img {
+.footer .footer__wrapper .footer__left .leftSide__app--img--img img {
   -o-object-fit: cover;
      object-fit: cover;
-}
-.footer .footer__wrapper .footer__left .leftSide__app__title--img img:nth-child(1) {
-  margin-right: 0.5rem;
 }
 .footer .footer__wrapper .footer__right .rightSide__footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 .footer .footer__wrapper .footer__right .rightSide__footer .rightSide__footer-aboutUs {
-  width: 18rem;
+  width: 16rem;
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 .footer .footer__wrapper .footer__right .rightSide__footer .rightSide__footer-aboutUs h2 {
   color: #3b3735;
@@ -926,10 +927,19 @@ body {
   font-size: 1.8rem;
 }
 .footer .footer__wrapper .footer__right .rightSide__footer .rightSide__footer-aboutUs ul li a {
+  transition: 0.3s;
   color: #3b3735;
 }
 .footer .footer__wrapper .footer__right .rightSide__footer .rightSide__footer-aboutUs ul li a:hover {
   text-decoration: underline;
+}
+.footer .footer__wrapper .footer__right .rightSide__footer .leftSide__app--mobile {
+  display: block;
+}
+.footer .footer__wrapper .footer__right .rightSide__footer .leftSide__app--mobile .leftSide__app__title {
+  color: #3b3735;
+  font-family: "Archivo-Black", sans-serif, Helvetica;
+  margin-bottom: 1rem;
 }
 .footer .footer__copyright {
   text-align: center;
