@@ -1,6 +1,6 @@
 @import "./variables";
 // mixin
-@mixin center-item($justifyContent, $alignItems) {
+@mixin center-item($justifyContent:true, $alignItems:true) {
     display: flex;
     justify-content: $justifyContent;
     align-items: $alignItems;
