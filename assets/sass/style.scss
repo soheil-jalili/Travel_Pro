@@ -18,6 +18,7 @@ body {
   line-height: 1.6;
   font-size: 1.6rem; // == font-size: 1.6rem;
   background-color: $backgroundBody;
+  overflow-x: hidden;
 }
 
 /***** Header *****/
@@ -397,6 +398,30 @@ body {
     @include center-item(center, center);
     flex-direction: column;
     padding: 6rem 0;
+    position: relative !important;
+    z-index: 1;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60rem;
+      height: 60rem;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      z-index: -1 !important;
+    }
+
+    &::after {
+      background: url("../svgs/shape1.svg");
+      right: -45rem;
+      top: -10rem;
+    }
+    &::before {
+      background: url("../svgs/shape2.svg");
+      left: -45rem;
+      bottom: 40rem;
+    }
+
     &__img {
       margin-bottom: 2rem;
     }
@@ -531,6 +556,7 @@ body {
   /***** Contact *****/
   .contact {
     @include center-item(space-between, center);
+    position: relative;
     flex-direction: column-reverse;
     background-color: $backgroundColorContactUs;
     border-radius: 2rem;
@@ -539,32 +565,27 @@ body {
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
     margin: 6rem 0;
-    position: relative;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 3rem 2rem;
     text-align: center;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15rem;
+      bottom: 0;
+      left: -15rem;
+      right: 0;
+      background: url("../svgs/shape3.svg") no-repeat;
+      width: 50rem;
+      height: 50rem;
+      background-size: contain;
+    }
     .contact__left-side {
       padding: 3rem;
       z-index: 1;
-      &::before {
-        content: "";
-        background-image: url("../svg-icons/contactWave.svg");
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
-        border-radius: 2rem;
-        -webkit-border-radius: 2rem;
-        -moz-border-radius: 2rem;
-        -ms-border-radius: 2rem;
-        -o-border-radius: 2rem;
-        background-repeat: no-repeat;
-      }
       .contact__left-side__title {
         font-family: $secondary-font;
         color: $exploreImgTitleColor;

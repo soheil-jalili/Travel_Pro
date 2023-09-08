@@ -40,6 +40,9 @@
   .footer .rightSide__footer-aboutUs {
     width: 100% !important;
   }
+  .footer .leftSide__app--mobile {
+    margin: 0 auto;
+  }
 }
 @media only screen and (max-width: 324px) {
   .content__header {
@@ -89,6 +92,14 @@
     flex-direction: row !important;
     text-align: left !important;
   }
+  .contact::before {
+    width: auto !important;
+    height: auto !important;
+    top: -5rem !important;
+    left: -40rem !important;
+    background-size: auto !important;
+    background-position: center left !important;
+  }
   .contact__left-side {
     flex-basis: 60% !important;
     padding-right: 2rem;
@@ -136,8 +147,15 @@
   .footer__scroll {
     left: auto !important;
   }
+  .contact::before {
+    top: -10rem !important;
+    left: -30rem !important;
+  }
 }
 @media only screen and (min-width: 1200px) {
+  .header {
+    min-height: 80vh;
+  }
   .contact__left-side {
     flex-basis: auto !important;
     width: 60rem;
@@ -152,6 +170,10 @@
   .rightSide__footer-aboutUs {
     margin-bottom: 0 !important;
     margin-left: 2rem !important;
+  }
+  .contact::before {
+    top: -15rem !important;
+    left: -15rem !important;
   }
 }
 @media only screen and (min-width: 1400px) {
