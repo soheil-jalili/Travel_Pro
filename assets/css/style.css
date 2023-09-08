@@ -203,7 +203,7 @@ body {
 }
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; /* font-size: 10px; */
   scroll-behavior: smooth;
 }
 
@@ -215,7 +215,7 @@ html {
 
 body {
   line-height: 1.6;
-  font-size: 1.6rem;
+  font-size: 1.6rem; /* == font-size: 1.6rem; */
   background-color: #faf4f2;
   overflow-x: hidden;
 }
@@ -678,7 +678,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main .destinations__places .place__banner .place__like {
   display: flex;
@@ -927,7 +927,7 @@ body {
 }
 .footer .footer__wrapper .footer__left .leftSide__app--img--img img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .footer .footer__wrapper .footer__right .rightSide__footer {
   display: flex;
