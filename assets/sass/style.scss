@@ -639,6 +639,7 @@ body {
             outline: none;
             border: none;
             flex-shrink: 0;
+            box-shadow: 0 0 1.5rem rgba(231, 111, 81, 0.4);
           }
         }
       }
@@ -686,6 +687,7 @@ body {
     -o-border-radius: 2rem;
     margin: 0 auto;
     left: 0;
+    box-shadow: 0 0 1rem rgba($color: $exploreImgTitleColor, $alpha: 0.05);
   }
   .footer__wrapper {
     .footer__left {
