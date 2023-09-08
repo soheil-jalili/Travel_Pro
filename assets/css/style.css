@@ -608,7 +608,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 6rem 0;
+  padding: 4rem 0;
   position: relative !important;
   z-index: 1;
 }
@@ -940,7 +940,7 @@ body {
   margin-left: 1rem;
   margin-bottom: 1rem;
 }
-.footer .footer__wrapper .footer__right .rightSide__footer .rightSide__footer-aboutUs h2 {
+.footer .footer__wrapper .footer__right .rightSide__footer .rightSide__footer-aboutUs h3 {
   color: #3b3735;
   font-family: "Archivo-Black", sans-serif, Helvetica;
   margin-bottom: 1rem;
